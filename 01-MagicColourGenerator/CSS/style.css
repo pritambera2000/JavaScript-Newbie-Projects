@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Source+Code+Pro:wght@500&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  background: #f1f5f8;
+  font-family: 'Source Code Pro', monospace;
+}
+
+.nav-container {
+  background: white;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.nav-container h2 {
+  padding: 0 0.3em;
+  color: #2484f1;
+  margin: 0;
+}
+
+.nav-links ul {
+  text-align: center;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.nav-links ul a {
+  text-decoration: none;
+  display: block;
+  padding: 0.3em 0em;
+  color: black;
+  font-size: 1.2em;
+}
+
+.nav-links ul a:hover {
+  font-weight: bold;
+}
+
+.nav-links ul a:active {
+  color: #2484f1;
+}
+
+.hero {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  min-height: calc(100vh - 3rem);
+}
+
+.container {
+  text-align: center;
+}
+
+.container h2 {
+  background: #20272E;
+  color: white;
+  padding: 1em 1em;
+  border-radius: 0.4em;
+}
+
+.container .btn {
+  font-family: 'Source Code Pro', monospace;
+  padding: 0.8em 1.3em;
+  cursor: pointer;
+  border-radius: 1em;
+  border: 3px solid #2484f1;
+  font-size: 1.1em;
+  background: transparent;
+}
+
+.container .btn:hover {
+  background: #2484f1;
+  color: white;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 1080px) {
+  h2 {
+    font-size: 2em;
+  }
+  .nav-links ul a {
+    font-size: 1.5em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
