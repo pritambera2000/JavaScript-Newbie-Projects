@@ -1,0 +1,198 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Source+Code+Pro:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Birthstone&display=swap');
+
+body{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    background:hsl(210, 36%, 96%);
+    font-family:Poppins;
+}
+
+//  ======== Main heading =======
+.title{
+    text-align:center;
+    color:rgb(248, 130, 189);
+    box-shadow:0 5px 15px rgba(26, 190, 231, 0.2);
+    padding: 0.3em 0;
+    background:#f2f2f2;
+    h2{
+        margin:0.1em;
+        font-family: 'Birthstone', cursive;
+        font-size:2rem;
+    }
+
+}
+
+// ==========  All Messages ======
+.questions{
+    width: 90vw;
+    margin: 0 auto;
+    max-width: 1170px;
+    
+    //position: absolute;
+//  ===== Individual msg     ======     
+    .question{
+        // position: relative;
+        // // display: block;
+        margin: 2em 0.5em;
+        background: white;
+    //      display: grid;
+    // grid-template-rows: repeat(3, 0.3fr);
+    // display:flex;
+    // align-items:center;
+    // flex-direction: column;
+    // justify-content: space-between;
+    border-radius:1em;
+    box-shadow:0 5px 15px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem 1.5rem 0 1.5rem;
+    }
+
+    .answer{
+        text-align:center;
+        padding:1rem 0 1.5rem 0;
+        border-top: 2px solid rgb(36, 132, 241);
+        p{
+            color:#eead4d;
+    }
+    }
+    
+}
+
+// ========   Msg Title  with toggeler button ======
+ .question-title{
+    display:flex;
+   align-items: center;
+   justify-content: space-between;
+   padding-bottom:1em;
+   h4{
+       color:rgb(206, 40, 240);
+   }
+    
+    
+}
+
+//// ======= Footer Styling =====
+.footer{
+    text-align:center;
+    background:#20272E;
+    color:white;
+    h3{
+        margin:0;
+        font-size:0.8em;
+    }
+}
+.footer ul{
+    display:flex;
+    justify-content:space-evenly;
+    font-size:1.4em;
+    padding:0em 1em;
+    list-style: none;
+    margin:0;
+
+}
+// ========= Footer icons Styling ========
+.footer a{
+    text-decoration: none;
+    color:white;
+    // // -o-transition:.5s;
+    // // -ms-transition:.5s;
+    // // -moz-transition:.5s;
+    // // -webkit-transition:.5s;
+    //  transition: .5s;
+    transition:  1.3s;
+    padding:10px 12px;
+    &:hover{
+        background-color: #c59d5f;
+        transform: rotate(180deg);
+    }
+}
+
+// ====== Styling for the Button with Monkey Emoji ====
+.question-btn{
+    background:transparent;
+    border:transparent;
+    //color: rgb(36, 132, 241);
+    cursor:pointer;
+    transition: all 0.3s linear;
+    font-size:1.7rem;
+    //letter-spacing: 0.3em;
+    // .plus-icon{
+    //     border:2px solid rgb(36, 132, 241);
+    //     border-radius: 0% 90% / 76%;
+    //     background:transparent;
+    //     padding:0.1em 0.1em;
+    //     text-align:center;
+    //     letter-spacing: 0;
+    //     background: black;
+    //     color:white;
+    //     transform: rotate(-40deg);
+   // }
+
+    &:hover{
+        transform: rotate(180deg);
+        font-size:1.8rem;
+        font-weight:bold;
+         color:red;
+    }
+
+}
+
+// ========== Wider Screen ========
+@media only screen and (min-width:768px){
+    .questions{
+        // display:grid;
+        // // place-items: center;
+        // grid-template-columns: repeat(3, 0.5fr);
+        width: 60vw;
+    }
+
+    .question-title{
+        h4{
+            font-size:1.4rem;
+        }
+    }
+    .answer{
+        p{
+            color:#eead4d;
+    }
+    }
+    .title{
+        h2{
+            font-size:3.5rem;
+        }
+    }
+}
+
+// ======= For Toggle Functionality =====
+
+.answer{
+    display:none;
+}
+.show {
+   .answer{
+    display:block;
+} .minus-icon{
+    display:inline;
+}
+.plus-icon{
+    display:none;
+}
+.msg-on{
+    display: inline;
+    color: rgb(84, 198, 202);
+}
+.msg-off{
+    display:none;
+}
+}
+.minus-icon{
+    display:none;
+}
+// .message{
+//     display:block;
+// }
+.msg-on{
+    display:none;
+}
