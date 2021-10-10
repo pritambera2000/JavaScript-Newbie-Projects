@@ -83,7 +83,7 @@ nav{
         font-size:1.1rem;
         top: -3vh;
         transform: translateY(0);
-        animation: fall 4s linear forwards;
+        animation: fall 6s linear forwards;
     }
     @keyframes fall {
         to {
@@ -150,6 +150,7 @@ iframe{
 @media only screen and (min-width:768px){
  .redHeart, .heart, .greenHeart{
         font-size:2rem;
+        animation: fall 3s linear forwards
     }
     nav{
         h2{
