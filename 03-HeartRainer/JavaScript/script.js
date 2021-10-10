@@ -3,10 +3,10 @@ function heartRainerRed(){
     const redHeart = document.createElement("div");
     redHeart.classList.add("redHeart");
 
-    redHeart.innerText = "💖💗";
+    redHeart.innerText = "💖";
     document.body.appendChild(redHeart);
     redHeart.style.left = Math.random() * 100 + "vw";
-    redHeart.style.animationDuration = Math.random() * 2+5+"7";
+    redHeart.style.animationDuration = Math.random() * 1+1+"1";
    setTimeout(()=>{
     redHeart.remove();
       },10000);
@@ -24,7 +24,7 @@ function heartRainerBlue(){
     heart.innerText = " 💙 ";
     document.body.appendChild(heart);
     heart.style.left = Math.random() * 100 + "vw";
-    heart.style.animationDuration = Math.random() * 2+1+"3";
+    heart.style.animationDuration = Math.random() * 1+1+"1";
    setTimeout(()=>{
     heart.remove();
       },10000);
@@ -41,7 +41,7 @@ function heartRainerGreen(){
     greenHeart.innerText = "💚";
     document.body.appendChild(greenHeart);
     greenHeart.style.left = Math.random() * 100 + "vw";
-    greenHeart.style.animationDuration = Math.random() * 2+5+"7";
+    greenHeart.style.animationDuration = Math.random() * 1+1+"1";
    setTimeout(()=>{
     greenHeart.remove();
       },10000);

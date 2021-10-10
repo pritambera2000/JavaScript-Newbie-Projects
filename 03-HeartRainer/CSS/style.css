@@ -78,8 +78,8 @@ h2 {
   top: -3vh;
   -webkit-transform: translateY(0);
           transform: translateY(0);
-  -webkit-animation: fall 4s linear forwards;
-          animation: fall 4s linear forwards;
+  -webkit-animation: fall 6s linear forwards;
+          animation: fall 6s linear forwards;
 }
 
 @-webkit-keyframes fall {
@@ -157,6 +157,8 @@ h2 {
 @media only screen and (min-width: 768px) {
   .redHeart, .heart, .greenHeart {
     font-size: 2rem;
+    -webkit-animation: fall 3s linear forwards;
+            animation: fall 3s linear forwards;
   }
   nav h2 {
     font-size: 2rem;
