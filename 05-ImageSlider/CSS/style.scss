@@ -1,0 +1,140 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Source+Code+Pro:wght@500&display=swap');
+body{
+ margin:0;
+ padding:0;
+ box-sizing:border-box; 
+ background:hsl(210, 36%, 96%)  
+}
+
+nav{
+    h2{
+        text-align:center;
+        background: white;
+        box-shadow:0 5px 15px rgba(26, 190, 231, 0.2)
+    }
+}
+
+// .hero{
+//     display: flex;
+//     align-items:center;
+//     justify-content: center;
+//     height:100vh;
+
+//     .main{
+//         height:300px;
+//         width:300px;
+//         overflow:hidden;
+//     .img-container{
+//         display: flex;
+    
+//     img{
+//         height:300px;
+//         width:300px;
+//         object-fit:cover
+//     }
+//     }
+//     }
+// }
+
+.hero{
+    text-align:center;
+    // display: flex;
+    // align-items:center;
+    // justify-content: center;
+    // min-height: calc(100vh - 7rem);
+   .img-container{
+    // height:70vh;
+    // width:91vw;
+    overflow:hidden;
+    // min-height: calc(100vh - 9rem);
+    box-shadow:0 5px 15px rgba(4, 16, 19, 0.2);
+    margin:auto;
+    width:85%;
+    margin-bottom:1em;
+    .images{
+        display:flex;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(0);
+       
+    }
+}
+
+    img{
+        // height:70vh;
+        // width:91vw;
+        object-fit:cover;
+        height:300px;
+        width:400px;
+        
+            }
+
+   
+}
+
+
+
+
+//// ======= Footer Styling =====
+.footer{
+    text-align:center;
+    background:#20272E;
+    color:white;
+    h3{
+        margin:0;
+        font-size:0.8em;
+    }
+}
+.footer ul{
+    display:flex;
+    justify-content:space-evenly;
+    font-size:1.4em;
+    padding:0em 1em;
+    list-style: none;
+    margin:0;
+
+}
+// ========= Footer icons Styling ========
+.footer a{
+    text-decoration: none;
+    color:white;
+    // // -o-transition:.5s;
+    // // -ms-transition:.5s;
+    // // -moz-transition:.5s;
+    // // -webkit-transition:.5s;
+    //  transition: .5s;
+    transition:  1.3s;
+    padding:10px 12px;
+    &:hover{
+        background-color: #c59d5f;
+        transform: rotate(180deg);
+    }
+}
+@media  only screen and(min-width:740px){
+        .hero{
+            .img-container{
+                height: 75vh;
+                width:66vw;
+            }
+            img{
+                height:75vh;
+                width:93vw;
+                object-fit:contain;
+            }
+        }
+
+}
+@media  only screen and(min-width:1200px){
+    .hero{
+        .img-container{
+            height: 75vh;
+            width:40vw;
+        }
+        img{
+            height:79vh;
+            width:93vw;
+            object-fit:contain;
+        }
+    }
+
+}

@@ -1,0 +1,113 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Source+Code+Pro:wght@500&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #f1f5f8;
+}
+
+nav h2 {
+  text-align: center;
+  background: white;
+  -webkit-box-shadow: 0 5px 15px rgba(26, 190, 231, 0.2);
+          box-shadow: 0 5px 15px rgba(26, 190, 231, 0.2);
+}
+
+.hero {
+  text-align: center;
+}
+
+.hero .img-container {
+  overflow: hidden;
+  -webkit-box-shadow: 0 5px 15px rgba(4, 16, 19, 0.2);
+          box-shadow: 0 5px 15px rgba(4, 16, 19, 0.2);
+  margin: auto;
+  width: 85%;
+  margin-bottom: 1em;
+}
+
+.hero .img-container .images {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.hero img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 300px;
+  width: 400px;
+}
+
+.footer {
+  text-align: center;
+  background: #20272E;
+  color: white;
+}
+
+.footer h3 {
+  margin: 0;
+  font-size: 0.8em;
+}
+
+.footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: 1.4em;
+  padding: 0em 1em;
+  list-style: none;
+  margin: 0;
+}
+
+.footer a {
+  text-decoration: none;
+  color: white;
+  -webkit-transition: 1.3s;
+  transition: 1.3s;
+  padding: 10px 12px;
+}
+
+.footer a:hover {
+  background-color: #c59d5f;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+@media only screen and (min-width: 740px) {
+  .hero .img-container {
+    height: 75vh;
+    width: 66vw;
+  }
+  .hero img {
+    height: 75vh;
+    width: 93vw;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .hero .img-container {
+    height: 75vh;
+    width: 40vw;
+  }
+  .hero img {
+    height: 79vh;
+    width: 93vw;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+/*# sourceMappingURL=style.css.map */
