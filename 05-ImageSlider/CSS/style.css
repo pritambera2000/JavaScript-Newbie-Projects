@@ -6,6 +6,7 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: #f1f5f8;
+  font-family: Poppins;
 }
 
 nav h2 {
@@ -13,10 +14,13 @@ nav h2 {
   background: white;
   -webkit-box-shadow: 0 5px 15px rgba(26, 190, 231, 0.2);
           box-shadow: 0 5px 15px rgba(26, 190, 231, 0.2);
+  font-size: 2rem;
 }
 
 .hero {
   text-align: center;
+  min-height: calc(90vh - 7rem);
+  margin-top: 6em;
 }
 
 .hero .img-container {
@@ -45,6 +49,7 @@ nav h2 {
      object-fit: cover;
   height: 300px;
   width: 400px;
+  cursor: pointer;
 }
 
 .footer {
@@ -85,29 +90,35 @@ nav h2 {
           transform: rotate(180deg);
 }
 
-@media only screen and (min-width: 740px) {
-  .hero .img-container {
-    height: 75vh;
-    width: 66vw;
+@media only screen and (min-width: 460px) {
+  .hero {
+    min-height: calc(90vh - 7rem);
+    margin-top: 3em;
   }
-  .hero img {
-    height: 75vh;
-    width: 93vw;
-    -o-object-fit: contain;
-       object-fit: contain;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
   .hero .img-container {
-    height: 75vh;
     width: 40vw;
   }
   .hero img {
-    height: 79vh;
-    width: 93vw;
-    -o-object-fit: contain;
-       object-fit: contain;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 320px;
+    width: 400px;
+  }
+}
+
+@media only screen and (min-width: 970px) {
+  .hero {
+    min-height: calc(90vh - 10rem);
+    margin-top: 7em;
+  }
+  .hero .img-container {
+    width: 25vw;
+  }
+  .hero img {
+    height: 320px;
+    width: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 /*# sourceMappingURL=style.css.map */
