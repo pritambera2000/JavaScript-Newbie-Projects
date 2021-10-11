@@ -4,16 +4,19 @@ body{
  margin:0;
  padding:0;
  box-sizing:border-box; 
- background:hsl(210, 36%, 96%)  
+ background:hsl(210, 36%, 96%);
+ font-family:Poppins;  
 }
 
 nav{
     h2{
         text-align:center;
         background: white;
-        box-shadow:0 5px 15px rgba(26, 190, 231, 0.2)
+        box-shadow:0 5px 15px rgba(26, 190, 231, 0.2);
+        font-size:2rem;
     }
 }
+
 
 // .hero{
 //     display: flex;
@@ -39,6 +42,8 @@ nav{
 
 .hero{
     text-align:center;
+    min-height: calc(90vh - 7rem);
+    margin-top: 6em;
     // display: flex;
     // align-items:center;
     // justify-content: center;
@@ -47,7 +52,7 @@ nav{
     // height:70vh;
     // width:91vw;
     overflow:hidden;
-    // min-height: calc(100vh - 9rem);
+    //  min-height: calc(100vh - 9rem);
     box-shadow:0 5px 15px rgba(4, 16, 19, 0.2);
     margin:auto;
     width:85%;
@@ -66,6 +71,7 @@ nav{
         object-fit:cover;
         height:300px;
         width:400px;
+        cursor: pointer;
         
             }
 
@@ -110,30 +116,36 @@ nav{
         transform: rotate(180deg);
     }
 }
-@media  only screen and(min-width:740px){
+@media  only screen and(min-width:460px){
         .hero{
+            // min-height: calc(100vh - 9rem);
+            // margin:7em;
+            min-height: calc(90vh - 7rem);
+            margin-top: 3em;
             .img-container{
-                height: 75vh;
-                width:66vw;
+                // min-height: calc(100vh - 9rem);
+                width:40vw;
+                
             }
             img{
-                height:75vh;
-                width:93vw;
-                object-fit:contain;
+                object-fit:cover;
+                 height:320px;
+                width:400px;
             }
         }
 
 }
-@media  only screen and(min-width:1200px){
+@media  only screen and(min-width:970px){
     .hero{
+        min-height: calc(90vh - 10rem);
+        margin-top: 7em;
         .img-container{
-            height: 75vh;
-            width:40vw;
-        }
+            // height: 50vh;
+                width:25vw;}
         img{
-            height:79vh;
-            width:93vw;
-            object-fit:contain;
+            height:320px;
+            width:400px;
+            object-fit:cover;
         }
     }
 
