@@ -1,0 +1,21 @@
+.item-list{
+    article{
+        
+        display:flex;
+    }
+}
+.added-items{
+    visibility: hidden;
+}
+.showadded-items{
+    visibility:visible ;
+}
+.alert-danger{
+    
+       color:red; 
+    
+    
+}
+.alert-safe{
+    color:green;
+}
