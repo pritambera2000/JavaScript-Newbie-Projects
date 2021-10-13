@@ -1,21 +1,221 @@
-.item-list{
-    article{
-        
-        display:flex;
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Source+Code+Pro:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Birthstone&display=swap");
+body {
+  background: hsl(210, 36%, 96%);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: Poppins;
+}
+nav {
+  .title {
+    h3 {
+      margin: 1em 0;
+      text-align: center;
+      font-size: 1.3em;
+      background: white;
+      color: rgb(253, 128, 149);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      padding: 0.5em;
+      border-radius: 0% 103%/302%;
+      font-family: "Source Code Pro", monospace;
     }
+  }
 }
-.added-items{
-    visibility: hidden;
+//  ======  Main Sections ========  //
+.main {
+  min-height: calc(100vh - 11rem);
+  margin-top: 7em;
+  h4 {
+    font-family: Birthstone;
+    font-size: 2em;
+    margin: 0;
+  }
 }
-.showadded-items{
-    visibility:visible ;
+//  ======  Hero Sections ========  //
+.hero {
+  text-align: center;
+  margin: auto;
+  border-radius: 1.7em;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  background: white;
+  padding: 1em;
+  position: relative;
+  width: 89%;
+  margin-bottom: 1em;
+  padding-top: 4em;
+  //  ======  Form Section ========  //
+
+  .form {
+    padding: 1em;
+    p {
+      border-radius: 0.3em;
+      display: grid;
+      height: 1.5rem;
+      padding: 0.25em;
+      transition: 0.3s ease-in-out;
+      overflow: hidden;
+      margin-top: 0;
+    }
+    //  ======  Input From  User  ========  //
+    .main-form {
+      display: flex;
+      justify-content: center;
+
+      #add-item {
+        padding: 1em;
+        padding-left: 1.2em;
+        background: hsl(213, 87%, 94%);
+        border: none;
+        border-top-left-radius: 1em;
+        border-bottom-left-radius: 1em;
+        width: calc(72vw - 2rem);
+      }
+
+      #add-item::placeholder {
+        color: rgb(248, 116, 136);
+      }
+      .main-btn {
+        background: /*hsl(206, 81%, 79%)*/ rgb(255, 177, 190);
+        border: none;
+        border-top-right-radius: 1em;
+        border-bottom-right-radius: 1em;
+        cursor: pointer;
+        padding-left: 1em;
+        font-family: Poppins;
+        &:hover {
+          background: rgb(247, 90, 116);
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  //  ======  Dyanamically added by JS  Hidden By default ========  //
+  .single-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+
+    border-radius: 1em;
+    padding: 0.05em 1em;
+    margin: 0 1em 1em 1em;
+    background: hsl(206, 100%, 95%);
+    &:hover {
+      background: hsl(208, 100%, 90%);
+      transition: 0.5s ease-in-out;
+    }
+
+    .btn-container {
+      .edit-btn {
+        background: transparent;
+        border: none;
+        color: rgb(86, 240, 86);
+        font-size: 1.5em;
+        cursor: pointer;
+
+        &:hover {
+          font-size: 1.7em;
+          transition: 0.3s;
+          transform: rotate(35deg);
+          color:rgb(18, 243, 18);
+        }
+      }
+      .clear-btn {
+        background: transparent;
+        border: none;
+        color: red;
+        font-size: 1.5em;
+        cursor: pointer;
+        &:hover {
+          font-size: 1.7em;
+          transition: 0.3s;
+          transform: rotate(35deg);
+        }
+      }
+    }
+  }
+  //  ======  Clear All Button  ========  //
+  #clear-item {
+    background: transparent;
+    border-radius: 0.5em;
+    padding: 0.5em 0.5em;
+    border: 2px solid rgb(248, 130, 189);
+    cursor: pointer;
+    font-family: Poppins;
+
+    &:hover {
+      border: 3px solid rgb(248, 130, 189);
+      transition: 0.2s ease-in-out;
+      font-weight: bold;
+    }
+  }
 }
-.alert-danger{
-    
-       color:red; 
-    
-    
+//  ======  Bigger Screen ========  //
+@media only screen and (min-width: 800px) {
+  nav {
+    .title {
+      h3 {
+        border-radius: 1em;
+      }
+    }
+  }
+  .hero {
+    width: 60vw;
+  }
 }
-.alert-safe{
-    color:green;
+
+//// ======= Footer Styling =====
+.footer {
+  text-align: center;
+  background: #20272e;
+  color: white;
+  h3 {
+    margin: 0;
+    font-size: 0.8em;
+  }
+}
+.footer ul {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 1.4em;
+  padding: 0em 1em;
+  list-style: none;
+  margin: 0;
+}
+// ========= Footer icons Styling ========
+.footer a {
+  text-decoration: none;
+  color: white;
+  transition: 1.3s;
+  padding: 10px 12px;
+  &:hover {
+    background-color: #c59d5f;
+    transform: rotate(180deg);
+  }
+}
+
+// Important for JavaScript Functionality
+.added-items {
+  visibility: hidden;
+}
+.showadded-items {
+  visibility: visible;
+  p {
+    text-align: center;
+    display: block;
+  }
+}
+.alert-danger {
+  color: red;
+  background: lightcyan;
+  transition: 0.3s ease-in-out;
+}
+.alert-safe {
+  color: green;
+  background: lightcyan;
+  transition: 0.3s ease-in-out;
 }

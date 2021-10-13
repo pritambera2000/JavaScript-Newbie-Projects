@@ -1,50 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Note Taker</title>
-    <link rel="stylesheet" href="./CSS/style.css">
-</head>
-<body>
-    <nav>
-        <div class="title">
-                List Your Items Here
-        </div>
-    </nav>
-    <section class="hero">
-        <form class="form">
-            <p class="alert"></p>
-            <h3>Hello There! Have a Nice Hay</h3>
-            <div class="main-form">
-                <input type="text" id="add-item" placeholder="eg laptop">
-                <button type="submit" class="main-btn">Add Item</button>
-            </div>
+    <link rel="stylesheet" href="./CSS/style.css" />
+  </head>
 
+  <body>
+    <!-- title -->
+    <nav>
+      <div class="title">
+        <h3>I'll Remember Your Notes</h3>
+      </div>
+    </nav>
+    <div class="main">
+      <section class="hero">
+        <form class="form">
+          <h4>Hello! Add Your Items Here 👇</h4>
+          <p class="alert"></p>
+          <!-- Form for input from user     -->
+          <div class="main-form">
+            <input type="text" id="add-item" placeholder="eg laptop" />
+            <button type="submit" class="main-btn">Add Item</button>
+          </div>
+          <!-- dynamically added by JS -->
         </form>
         <div class="added-items">
-            <div class="addeditem-list">
-                <!-- <article class="single-item">
+          <div class="addeditem-list">
+            <!-- <article class="single-item">
                     <p class="item-title">
-                        item
+                    c
                     </p>
                     <div class="btn-container">
                         <button class="edit-btn">
-                            edit
+                           <i class="far fa-edit"></i>
                         </button>
                         <button class="clear-btn">
-                            clear
+                           <i class="fas fa-trash"></i>
                         </button>
                     </div>
                 </article> -->
-
-            </div>
-            <button id="clear-item">clear Item</button>
+          </div>
+          <!-- clear all button -->
+          <button id="clear-item">Clear All</button>
         </div>
+      </section>
+    </div>
+    <!-- Footer -->
+    <section class="footer">
+      <div class="mail">
+        <a href="mailto:photography.pritambera@outlook.com"
+          ><span>✍</span> Somthing Here
+        </a>
+      </div>
+      <div class="social-links">
+        <ul class="social-links">
+          <li>
+            <a
+              href="https://facebook.com/pritamlovesphotography"
+              class="fa fa-facebook"
+            ></a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/pritambera2000"
+              class="fa fa-github"
+            ></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/pritamhacks" class="fa fa-twitter"></a>
+          </li>
+        </ul>
+      </div>
+      <h3>Made With <span>☕</span> by Pritam</h3>
     </section>
 
-
     <script src="./JavaScript/script.js"></script>
-</body>
+  </body>
 </html>
