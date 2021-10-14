@@ -1,71 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Source+Code+Pro:wght@500&display=swap');
-body{
-    margin:0;
-    padding:0;
-    font-family:Poppins;
+// ======= Font Import ========= //
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Source+Code+Pro:wght@500&display=swap");
+// ======= css Reset ========= //
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Poppins;
 }
-
-.hero{
-    height:100vh;
-    background:#e1f0fc;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    .game_board{
-        background: linear-gradient(pink, skyblue);
-        height:85vmin;
-        width:90vmin;
-        border:3px solid rgb(248, 143, 160);
-        display:grid;
-        grid-template-columns: repeat(18,1fr);
-        grid-template-rows: repeat(18,1fr);
-        box-shadow:14px 14px 14px rgba(0, 0, 0, 0.2);
-        border-radius:1em;
-    }
-    #score_board{
-        position:absolute;
-        color:rgb(11, 206, 11);
-        top:5px;
-      font-size:1.2em;
-        left:10em;
-         border: 2px solid rgb(36, 132, 241);
-        border-radius: 0.5em;
+// ======= Main Container ========= //
+.hero {
+  height: 100vh;
+  background: #e1f0fc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // ======= Styling The Game Board ========= //
+  .game_board {
+    background: linear-gradient(pink, skyblue);
+    height: 85vmin;
+    width: 90vmin;
+    border: 3px solid rgb(248, 143, 160);
+    display: grid;
+    grid-template-columns: repeat(18, 1fr);
+    grid-template-rows: repeat(18, 1fr);
+    box-shadow: 14px 14px 14px rgba(0, 0, 0, 0.2);
+    border-radius: 1em;
+  }
+  // ======= Styling The Score & HiScore Board ========= //
+  #score_board {
+    position: absolute;
+    color: rgb(11, 206, 11);
+    top: 5px;
+    font-size: 1.2em;
+    left: 10em;
+    border: 2px solid rgb(36, 132, 241);
+    border-radius: 0.5em;
     padding: 0 1em;
     background: white;
-    box-shadow: 5px 15px  rgba(198, 192, 192, 0.2);
-    &:hover{
-        border-radius: 3.5px solid  rgb(36, 132, 241);
-        font-weight:bold;
-        cursor: pointer;
+    box-shadow: 5px 15px rgba(198, 192, 192, 0.2);
+    &:hover {
+      border-radius: 3.5px solid rgb(36, 132, 241);
+      font-weight: bold;
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
     }
+  }
+  #hi_score {
+    position: absolute;
+    color: red;
+    top: 5px;
+    font-size: 1.2em;
+    right: 10em;
+    border: 2px solid rgb(36, 132, 241);
+    border-radius: 0.5em;
+    padding: 0 1em;
+    background: white;
+    box-shadow: 5px 15px rgba(198, 192, 192, 0.2);
+    &:hover {
+      border-radius: 3.5px solid rgb(36, 132, 241);
+      font-weight: bold;
+      transition: 0.3s ease-in-out;
+      cursor: pointer;
     }
-   #hi_score{
-        position:absolute;
-        color:red;
-        top:5px;
-        font-size:1.2em;
-        right:10em;
-        border: 2px solid rgb(36, 132, 241);
-        border-radius: 0.5em;
-padding: 0 1em;
-background: white;
-box-shadow: 5px 15px rgba(198, 192, 192, 0.2);
-&:hover{
-    border-radius: 3.5px solid  rgb(36, 132, 241);
-    font-weight:bold;
-    cursor: pointer;
-}
-    }
-    .snake_head{
-        background:linear-gradient(rgb(253, 6, 6),rgb(252, 255, 60));
-        border-radius:30% 10% /30%;
-    }
-    .snake_food{
-        border-radius:1em;
-        background:linear-gradient(rgb(1, 18, 255), rgb(34, 255, 189));
-    }
-    .snake_body{
-        background:linear-gradient(rgb(18, 255, 255) , rgb(165, 4, 152));
-        border-radius:0.9em;
-    }
+  }
+  // ======= Important For JavaScript Functionality  ========= //
+  .snake_head {
+    background: linear-gradient(rgb(253, 6, 6), rgb(252, 255, 60));
+    border-radius: 30% 10% /30%;
+  }
+  .snake_food {
+    border-radius: 1em;
+    background: linear-gradient(rgb(1, 18, 255), rgb(34, 255, 189));
+  }
+  .snake_body {
+    background: linear-gradient(rgb(18, 255, 255), rgb(165, 4, 152));
+    border-radius: 0.9em;
+  }
 }

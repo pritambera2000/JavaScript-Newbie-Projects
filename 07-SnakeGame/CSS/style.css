@@ -53,6 +53,8 @@ body {
 .hero #score_board:hover {
   border-radius: 3.5px solid #2484f1;
   font-weight: bold;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   cursor: pointer;
 }
 
@@ -73,6 +75,8 @@ body {
 .hero #hi_score:hover {
   border-radius: 3.5px solid #2484f1;
   font-weight: bold;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
   cursor: pointer;
 }
 
