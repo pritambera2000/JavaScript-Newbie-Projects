@@ -20,8 +20,9 @@ This Repository contains some Vanilla JavaScript Projects that i crated for prac
 <a href="07-SnakeGame" target="_blank">07-SnakeGame</a><br><br>
 
 ## 🚀 Deployments
+Check Out Projects In Action Here 
 
-[Magic Colour Generator](magiccolourgenerator.vercel.app)
+[Magic Colour Generator](https://magiccolourgenerator.vercel.app/)
 
 [Emoji Picker](https://emoji-picker-pritambera2000.vercel.app/)
 
