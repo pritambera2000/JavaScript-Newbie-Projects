@@ -36,6 +36,7 @@ Check Out Projects In Action Here
 
 [Snake Game](https://snakeplayer.netlify.app/)
 
-
-
+## Concepts
+JavaScript Fundamentals used in these Projects can be found Here <br><br>
+<a href="JSBasicRevise/JSFundamentals.md" target="_blank">JavaScript Fundamentals</a>
   
