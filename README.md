@@ -38,5 +38,5 @@ Check Out Projects In Action Here
 
 ## Concepts
 JavaScript Fundamentals used in these Projects can be found Here <br><br>
-<a href="JSBasicRevise/JSFundamentals.md" target="_blank">JavaScript Fundamentals</a>
+<a href="JSBasicsRevise/JSFundamentals.md" target="_blank">JavaScript Fundamentals</a>
   
