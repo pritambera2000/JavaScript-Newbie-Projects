@@ -95,4 +95,50 @@ let's see var first
 ```
    ####  Variable Hoisting
    Another unusual thing about variables in JavaScript is that you can refer to a variable declared later, without getting an exception. <br>
-   This concept is known as hoisting. Variables in JavaScript are, in a sense, "hoisted" (or "lifted") to the top of the function or statement. However, variables that are hoisted return a value of ```undefined```. So even if you declare and initialize after you use or refer to this variable, it still returns ```undefined```.
+   This concept is known as hoisting. Variables in JavaScript are, in a sense, "hoisted" (or "lifted") to the top of the function or statement. However, variables that are hoisted return a value of ```undefined```. So even if you declare and initialize after you use or refer to this variable, it still returns ```undefined```. <br>
+   ** Because variable declarations (and declarations in general) are processed before any code is executed, and memory is allocated for each var , if in the var is no value its showed undefined ** <br>
+```JavaScript
+    function do_something() {
+    console.log(bar); // undefined
+    var bar = 111;
+    console.log(bar); // 111
+    }
+    do_something()
+    /*another eg.*/
+    console.log(x); // undefined
+    var x = 3;
+```
+
+
+
+   ** Hoisting no longer works with ```let```. If we changed var to ```let``` in the above example, it would fail with an error.```because the variable is in a "temporal dead zone" from the start of the block until the declaration is processed.``` This is a good thing — declaring a variable after you initialize it results in confusing, harder to understand code. **
+
+   ```JavaScript
+    function do_something() {
+    console.log(bar); // Uncaught ReferenceError;
+    let bar = 111;
+    console.log(bar); 
+    }
+    do_something()
+     /*another eg.*/
+    console.log(x); // ReferenceError
+    let x = 3;
+```
+- apert from scope secondly, when you use var, you can declare the same variable as many times as you like, but with let you can't. The following would work:
+
+ ```JavaScript
+   var myName = 'Pritam';
+   var myName = 'Swapna'; //no error
+
+   let myName = 'Pritam';
+   let myName = 'Swapna'; //error
+````
+#### Updating a variable
+Once a variable has been initialized with a value, you can change (or update) that value by giving it a different value.
+
+
+ ````JavaScript
+    let myName = 'Pritam';
+    myName = 'Swapna'; //updated value pritam to swapna
+````
+
