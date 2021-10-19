@@ -142,3 +142,13 @@ Once a variable has been initialized with a value, you can change (or update) th
     myName = 'Swapna'; //updated value pritam to swapna
 ````
 
+
+
+## Data Types 
+
+There are two main datatypes in JS (i)Primitives (ii)Objects
+
+(i)Primitives Data Types are -- ```Numbers``` , ```Boolean``` , ```Strings``` , 
+
+(ii) Objects willbe discussed Later.
+
