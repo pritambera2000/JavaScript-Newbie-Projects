@@ -142,13 +142,113 @@ Once a variable has been initialized with a value, you can change (or update) th
     myName = 'Swapna'; //updated value pritam to swapna
 ````
 
-
+# Day -2
 
 ## Data Types 
 
 There are two main datatypes in JS (i)Primitives (ii)Objects
 
-(i)Primitives Data Types are -- ```Numbers``` , ```Boolean``` , ```Strings``` , 
+(i)Primitives Data Types are 7 types 
+
+```Boolean :``` They  are ```true``` or ```false```
+
+```Number :``` An Integer or Floating point number . e.g 32 or 32.123 . Integers are limited by ```±(2 to the power 53 - 1)```
+ 
+ ```String :```  for strings. A string may have zero or more characters, there’s no separate single-character type.
+
+ ```BigInt : ``` An integer with arbitrary precision. For example: 9007199254740992n.
+
+ ```undefined :``` A top-level property whose value is not defined.
+
+ ```null : ``` A special keyword denoting a null value. (Because JavaScript is case-sensitive, null is not the same as Null, NULL, or any other variant.)
+
+ ```symbol : ```      A data type whose instances are unique and immutable.
 
 (ii) Objects willbe discussed Later.
+
+Examples of primitives 
+****
+#### Boolean
+   booleans are two types true or false  ; This type is commonly used to store yes/no values: true means “yes, correct”, and false means “no, incorrect”.
+
+````JavaScript
+    let userLogIn = true; // yes , user loggedIn
+    let userSignUp = false; // false , user not signed In
+
+    let isGreater = 4 > 5;
+    console.log(isGreater); // false
+    let isLess = 4 < 5;
+    console.log(isLess); // true;
+
+````
+****
+ #### Number
+  The number type represents both integer and floating point numbers.
+
+  Besides regular numbers, there are so-called “special numeric values” which also belong to this data type: Infinity, -Infinity and NaN. 
+
+  NaN represents a computational error.
+
+```JavaScript
+let int = 786; // Integer
+let float = 77.5698; // Floating point
+
+let inf = (1/0);
+console.log(inf); // Infinity
+let noNumber = ("pritam"/2); 
+console.log(noNumber); /*  NaN ("pritam" is not a number so it returns 
+a computaional error)*/
+``` 
+****
+#### String
+A string in JavaScript must be surrounded by quotes.
+There are three kinds of quotes (i) Single quotes ```' '``` , (ii) Double quotes ```" "``` (iii) backticks ``` ` ` ```   ; charaters inside these quotes are strings
+
+```JavaScript
+let firstName = "Pritam"; // Double Quoted String 
+let lastName = "Bera"; //Single Quoted String
+let fullName = ` Your Full Name is ${firstName} ${lastName}`; // Backticks Strings
+
+console.log(fullName); //  Your Full Name is Pritam Bera
+```
+More About Strings Discussed Later;
+
+****
+
+#### BigInt
+
+A BigInt value is created by appending n to the end of an integer:
+
+```JavaScript
+const bigInt = 1234567890123456789012345678901234567890n;
+```
+****
+
+#### undefined
+
+The meaning of undefined is “value is not assigned”.
+
+If a variable is declared, but not assigned, then its value is undefined:
+
+*** undefined is different from reference error . 
+if variable is decleared but not value is assigened to it then it is ```undefined``` but if the variable is not decleard then it throughs ```reference error``` ***
+```JavaScript
+let country;
+console.log(country); // undefied coz no value is assigened to country
+
+console.log(state); // Uncaught ReferenceError: state is not defined state is decleared as a variable;
+```
+
+***
+#### null 
+
+It’s just a special value which represents “nothing”, “empty” or “value unknown”.
+```JavaScript
+let hobby = null;
+```
+***
+#### Symbol
+Details in objects section
+
+***
 
