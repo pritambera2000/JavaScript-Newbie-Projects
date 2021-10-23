@@ -251,4 +251,154 @@ let hobby = null;
 Details in objects section
 
 ***
+## Day -3
+
+### Numbers
+In modern JavaScript, there are two types of numbers:
+- Regular numbers in JavaScript are stored in 64-bit format IEEE-754, also known as “double precision floating point numbers”.i.e poisitve,negetive and decimal numbers
+- Big Init
+##### Ways to Write a Number
+Big Numbers
+```JavaScript
+let oneBillion = 1000000000 // normal method
+let newOneBillion = 1e9 // e9 = Nine Zeros
+let bigNum1 = 7300000000 //         method 1
+let bigNum2 = 7.3e9 //  special method 
+
+1e3 === 1 * 1000 // 1000
+1.32e6 === 1.32 *  1000000
+```
+Small Numbers
+```JavaScript
+let smallNumber = 0.00001 // normal method
+let smallNumber1 = 1e-5 // 0.00001 Five zeroes to the left from 1
+
+1e-5 === 1/100000 // 0.00001
+1.32-5 === 1.32/100000 // 0.0000132
+```
+Hexadecimal Numbers
+- Hexadecimal numbers are widely used in JavaScript to represent colors, encode characters, and for many other things
+```JavaScript
+let hex = 0xff; // 255
+```
+#### Number Methods
+
+- 1. Method :```toString(base) :```
+The method num.toString(base) returns a string representation of num in the numeral system with the given base.
+    - ``` base=16 :``` is used for hex colors, character encodings etc, digits can be 0..9 or A..F.
+    - ```base=2 :```  is mostly for debugging bitwise operations, digits can be 0 or 1.
+    - ``` base=36 :``` is the maximum, digits can be 0..9 or A..Z
+
+```JavaScript
+   let num1 = 1234
+  console.log(num1.toString(16)); // 4d2
+
+   let num2 = 5678;
+   console.log(num2.toString(2)); // 1011000101110
+   
+   console.log(9101112..toString(32)); // 8lnpo
+
+   /**** Please note that two dots in
+    123456..toString(36) is not a typo. If we want to 
+   call a method directly on a number, 
+   like toString in the example above,
+    then we need to place two dots .. after  *****/
+
+
+```
+
+- 2. Rounding
+
+One of the most used operations when working with numbers is rounding.
+  - methods are :
+    - ``` Math.floor :``` "Rounds Down" e.g - 3.1 to 3 ; -1.1 to -2
+    - ```Math.ceil :``` "Rounds Up" e.g- 3.1 to 4 ; -1.1 to -1
+    - ```Math.round : ``` "Rounds to the nearset integer" e.g - 3.1 to 3 ; 3.6 to 4; 3.5 to 4 too.
+    - ```Math.random() :``` Returns a random number from 0 to 1 (not including 1) e.g 0.1234567894322
+    - ```Math.pow(n, power) :``` Returns n raised to the given power. e.g ```alert( Math.pow(2, 10) ); // 2 in power 10 = 1024```
+
+  Prob: 1.234567 and want to round it to 2 digits, getting only 1.23
+  sol: There are Multiple Ways to do it
+  - Multiply And Devide 
+
+```JavaScript
+console.log(Math.round(1.234567 * 100)/100); // 1.234567 * 100 > 123.4567 (Math.floor method) > 123 (devided by 100) > 1.23
+
+```
+- 3. toFixed(n)
+The method toFixed(n) rounds the number to n digits after the point and returns a string representation of the result.
+```JavaScript
+let number = 13.342
+console.log(number.toFixed(1)); // 13.3
+console.log(number.toFixed(2)); // 13.34
+console.log(number.toFixed(3)); // 13.342
+console.log(number.toFixed(4)); // 13.3420 /*Please note that result of toFixed is a string. If the decimal part is shorter than required, zeroes are appended to the end:*/
+
+
+/*This rounds up or down to the nearest value, similar to Math.round:*/
+let number1 = 13.36679
+console.log(number1.toFixed(1)); // 13.4
+console.log(number1.toFixed(2)); // 13.37
+console.log(number1.toFixed(3)); // 13.367
+console.log(number1.toFixed(4)); // 13.3668
+
+```
+- 4. parseInt & parseFloat
+ this method read” a number from a string until they can’t.Converts a string to a numnber . The function parseInt returns an integer, whilst parseFloat will return a floating-point number:
+
+```JavaScript
+console.log(parseInt("100px")); // 100
+console.log(parseInt("12em")); // 12
+console.log(parseInt("a127")); // NaN ; First symbol stops the process;
+
+
+console.log(parseFloat('12.2em')); // 12.2
+console.log(parseFloat('12.2.6em')); // 12.2
+
+```
+he parseInt() function has an optional second parameter. It specifies the base of the numeral system, so parseInt can also parse strings of hex numbers, binary numbers and so on:
+```JavaScript
+/* parseInt(str ,base)*/
+let num = "133"
+console.log(parseInt(num,16)) // 307
+
+```
+
+#### Imprecise calculations
+ So, there is wired thig here 
+
+```JavaScript
+console.log(0.1+0.2) // Expected 0.3
+(0.1+0.2 === 0.3) // false
+console.log(0.1+0.2) // 0.30000000000000004
+```
+But why This happens : A Number is stored in memoy in binary form , a sequence of bits i.e 0 & 1 but fractions like 0.1 ans 0.2 that look simple in decimal numeric system but actually unEnding fractions in their binary form. e.g
+```0.1 = 1/10``` but ```1/3=0.3333(3)endlessfraction``` So, division by powers 10 is guaranteed to work well in the decimal system, but division by 3 is not. For the same reason, in the binary numeral system, the division by powers of 2 is guaranteed to work, but 1/10 becomes an endless binary fraction.There’s just no way to store exactly 0.1 or exactly 0.2 using the binary system, just like there is no way to store one-third as a decimal fraction.
+
+##### Solution of the problem
+```JavaScript
+/* By toFixed method*/
+let sum = 0.1+0.2
+console.log(sum.toFixed(2))//"0.30" (String)
+console.log(+sum.toFixed(2)) //0.30 (Number)
+
+/*By multiply and division*/
+
+console.log((0.1 * 100 + 0.2 * 100)/100); //0.3
+
+```
+
+#### Converting to number data types
+Sometimes we need to extract a number embded in strings i.e in "" . Specially when a user puts a number in a form . The method is ```Number()```
+
+```JavaScript
+let userInput = "12";
+let sum = "12" + 3;
+console.log(sum); // 123
+
+console.log(Number(userInput) + 3); // 15
+
+```
+ 
+### Basic operators, maths
 
