@@ -410,16 +410,180 @@ console.log((0.1 * 100 + 0.2 * 100)/100); //0.3
 ```
 
 #### Converting to number data types
-Sometimes we need to extract a number embded in strings i.e in "" . Specially when a user puts a number in a form . The method is ```Number()```
+Sometimes we need to extract a number embded in strings i.e in "" . Specially when a user puts a number in a form . The method is ```Number()```. Because the `+` operators convert numbers to strings. Details Below `Data type conversion` section.
 
 ```JavaScript
 let userInput = "12";
 let sum = "12" + 3;
-console.log(sum); // 123
+console.log(sum); // 123 (`+` operator converts 3 as a string )
 
-console.log(Number(userInput) + 3); // 15
+console.log(Number(userInput) + 3); // 15 
 
 ```
- 
+### Data type conversion
+JavaScript is dynamically typed language so we dont need to specify the data type of a variable when we decleare a variable.So that means data types are autometically converted as-needed during code execution. Example below.
+
+```JavaScript
+let rollNumber = 7; // Number 
+rollNumber = "Seven"; // converted and reassigened as string
+console.log(rollNumber);
+
+let userInput = "13";
+let sum = "13" + 3;
+let negetive = "13" - 3;
+console.log(sum); // 133 (3 is converted as string)
+console.log(negetive); //10 ( here 3 is act as a number)
+```
+As seen the `+` operator is only converts numbers as string but others not.
+
 ### Basic operators, maths
+
+Before jump into operators lets learn some basic terms i.e `operand`,`operator`
+`Operand`: In which the operator applied. e.g `5-3`here the two operand are `5`,`3`. & `-` is the `Operator`
+```JavaScript
+let num1 = 2;
+num1= -num1;
+console.log(num1); // -2 single operand pressent thats why this operator is unary
+
+let num2 = 5;
+let num3 = 7;
+console.log(num3 - num2); // 2 two operand(num2,num3) present  thats why this operatr is called binary operator
+
+```
+### Main Operator Types 
+
+- Assignment operators
+- Arithmetic Operators
+- Comparison Operators
+- Logical Operators
+- Increment Operator
+- Decrement Operator
+- Ternary Operators
+- Operator Precendence
+
+### Assignment Operator
+Assignment operators are operators that assign a value to a variable.
+#### Types - 
+- =  => x=4 , y=3
+- (Addition assignment) +=  => x+=y => x=x+y; // 7 
+- (Subtraction assignment) -+ => x-=y => x=x-y; // 1 
+- (Multiplication assignment) *= => x*=y => x=x*y; // 12 
+- (Division assignment) /= => x/=y => x=x/y; // 1.3333 
+- (Modulus assignment) %= => x%=y => x=x%y; // 1 
+
+### Arithmetic Operators
+Arithmetic operators are the basic operators that we use to do sums in JavaScript:
+#### Types - 
+- + => x+y; // 7 
+- - => x-y; // 1 
+- * => x*y; // 12
+- / => x/y; // 1.3333 
+- % => x%y; // 1 
+- ** => x**y // 64
+### Comparison Operators
+Sometimes we will want to run true/false tests, then act accordingly depending on the result of that test — to do this we use comparison operators.
+#### Types - 
+- === -> Strict equality | Tests whether the left and right values are identical to one Another
+- !== -> Strict-non-equality | Tests whether the left and right values are not identical to one Another
+- < -> Less than | Tests whether the left value is smaller than the right one.
+- > -> Greater than | Tests whether the left value is greater than the right one.
+- <= -> Less than or equal to | Tests whether the left value is smaller than or equal to the right one.
+- >= -> Greater than or equal to | Tests whether the left value is greater than or equal to the right one.
+
+```JavaScript
+console.log(3==="3"); // false
+console.log(3===3); // true  
+console.log(3=="3"); // true 
+console.log(3!==3); // false 
+console.log(3<2); // false 
+console.log(3>2); // true 
+console.log(3>=2); // true 
+console.log(3<=2); // false 
+console.log("mango".length == "milk".length ); // false
+console.log("pizza".length == "juice".length); // true
+```
+### Logical operators
+#### Types - 
+- && -> The && operator gets true only if the two operands are true.
+- || -> The || operator gets true either of the operand is true.
+- !  ->  The ! operator negates true to false and false to true.
+
+```JavaScript
+// && Example
+let check = 5>3 && 7>5
+console.log(check); // true (both are true)
+let check1 = 5>3 && 7>8;
+console.log(check1); // false ( 7>8 is false)
+let check2 = 5<3 && 9<8;
+console.log(check2);// false (both false)
+// || Example  
+let check3 = 5>3 || 7>5;
+console.log(check3);// true ( both true)
+let check4 = 5>3 || 7>8;
+console.log(check4); // true ( 5>3 is true so neat result also true )
+let check5 = 5<3 || 9<8 ;
+console.log(check5); // false (both false)
+// ! Example 
+let check6 = 5>3;
+console.log(check6); // true 
+let check7 = !(5>3);  
+console.log(check7); // false (converts true to false)
+```
+### Increment and decrement operators
+Sometimes you'll want to repeatedly add or subtract one to or from a numeric variable value. This can be conveniently done using the increment (++) and decrement (--) operators.
+### Increment              
+```JavaScript
+
+//Post Increment 
+let number = 2;
+ number++
+console.log(number); // 3 
+//Pre Increment
+let number1 = 2;      
+++number1;
+console.log(number1); // 3 
+
+```
+
+### Decrement   
+
+```JavaScript
+//Post Decrement
+let number2 = 2;
+number2--;
+console.log(number2); // 1 
+// Pre Decrement 
+let number3 = 2;
+--number3;
+console.log(number3); // 1 
+```
+## Ternary operator
+ The conditional (ternary) operator is the only JavaScript operator that takes three operands: a condition followed by a question mark (?), then an expression to execute if the condition is truthy followed by a colon (:), and finally the expression to execute if the condition is falsy. This operator is frequently used as an alternative to an if...else statement. 
+ 
+### Syntax:
+```JavaScript
+condition ? exprIfTrue : exprIfFalse
+```
+### Example 
+```JavaScript
+let isSweet = true;
+isSweet ? `It is sweet` : `It is not Sweet`; // 'It is Sweet'
+
+isSweet = false;
+isSweet ? `It is Sweet` : `It is not Sweet`; // 'It is not Sweet' 
+
+let name = "pritam";
+let drink = (name === "pritam" ) ? `tea` : `coffee`;
+console.log(drink); // 'tea'
+drink = (name === "priya") ? `tea` : `coffee`;
+console.log(drink); // 'coffee'
+```
+[Read more About Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
+
+## Operator Precedence 
+[Read Here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#operator_precedence)
+
+
+
+
 
