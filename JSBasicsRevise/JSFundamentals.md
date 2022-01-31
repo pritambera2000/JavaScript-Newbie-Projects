@@ -583,7 +583,198 @@ console.log(drink); // 'coffee'
 ## Operator Precedence 
 [Read Here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#operator_precedence)
 
+## Day-4
+### Making decisions in your code - Conditionals
+Conditional statements are used for make decisions based on different conditions. By default , statements in JavaScript script executed sequentially from top to bottom.
 
+Conditions can be implementing using the following ways:
+- if 
+- if..else
+- if Else if Else
+- switch
 
+### if
+The if(...) statement evaluates a condition in parentheses and, if the result is true, executes a block of code.
+#### Syntax:
+```JavaScript
+// syntax
+if (condition) {
+  //this part of code runs for truthy condition
+}
+```
+#### Example:
+```JavaScript 
+let age = 17;
+if (age>=18) {
+console.log("You can Enter")
+}; // No output as it is false 
+let newAge = 19;
+if (newAge>=18) {
+	console.log("You can Enter")
+}; // You can Enter
 
+```
+### if..else
+If condition is true the first block will be executed, if not the else condition will be executed.
+#### Syntax:
+```JavaScript
+if (condition) {
+   statement1  // this part of code runs for truthy condition 
+} else {
+   statement2 // this part of code runs for false condition  
+}
+
+```
+#### Example:
+```JavaScript
+let age = 16;
+if (age>=18) {
+	console.log("You can Drink Beer")
+} else {
+	console.log("You can Drink Juice")
+} // You can Drink Juice 
+```
+### If Else if else
+Multiple if...else statements can be nested to create an else if clause. Note that there is no elseif (in one word) keyword in JavaScript. 
+#### Syntax:
+```JavaScriptif (condition1)
+  statement1
+else if (condition2)
+  statement2
+else if (condition3)
+  statement3
+...
+else
+  statementN
+```
+#### Example:
+```JavaScript
+
+let int = 12;        
+if(int>0){
+	console.log("It is Positive Number");
+}else if(int<0){
+	console.log("It is a negetive number");
+}else if(int === 0){
+	console.log("It is Zero");
+}else{
+	console.log("It is not a number");
+}; // It is a Positive Number   
+```
+### Switch Stament 
+A switch statement can replace multiple if checks.
+It gives a more descriptive way to compare a value with multiple variants.
+### Syntax:
+The switch has one or more case blocks and an optional default.
+ 
+It looks like this:
+```JavaScript
+switch(x) {
+  case 'value1':  // if (x === 'value1')
+    ...
+    [break]
+
+  case 'value2':  // if (x === 'value2')
+    ...
+    [break]
+
+  default:
+    ...
+    [break]
+}
+```
+### Example:
+```JavaScript 
+let fruit = "mango";
+
+switch(fruit){
+case "orange":
+ console.log("orange's are orange");
+ break;
+case "banana":
+ console.log("banana's are yellow");
+ break;
+case "guava":
+ console.log("guava's are green");
+ break;
+default:
+ console.log("sorry " + fruit + " is not in the database");
+}; // sorry mango is not in the databse
+
+```
+### Looping Code
+Loops are all about doing the same thing over and over again. Often, the code will be slightly different each time round the loop, or the same code will run but with different variables.
+### Types:
+- for loop
+- while loop
+- do while loop
+- for of loop 
+- break & continue 
+
+#### for loop 
+### Syntax: 
+```JavaScript
+for (initializer; condition; final-expression) {
+  // code to run
+}
+```
+#### Examples: 
+```JavaScript
+for(i=0;i<5;i++){
+	console.log(i);
+};
+```
+In the above for loop, the statement start by declaring & initializing i to 0; then it checks i less than 5 and execute statements.and increments i after each pass though the loop.
+
+The declearation of i in the head of for loop is optional , and the conditional block is also optional we can skip all examples below
+
+```JavaScript 
+/*Optional for expressions*/
+// optional initialization
+
+let i = 0;
+for(;i<7;i++){
+	console.log(i);
+};
+//optional condition block
+for (let i = 0;; i++) {
+   console.log(i);
+   if (i > 3) break;
+   // more statements
+}
+//omit all 
+let i = 0;
+
+for (;;) {
+  if (i > 3) break;
+  console.log(i);
+  i++;
+}
+```
+#### While loop 
+#### Syntax: 
+```JavaScript 
+initializer
+while (condition) {
+  // code to run
+
+  final-expression
+}
+```
+#### Examples: 
+```JavaScript
+let i = 0;
+while(i<3){ // 0 1 2 
+console.log(i);
+i++
+
+let x = 5; 
+while(x){ // when x becomes 0 the loop stops 
+console.log(x);
+x-- 
+}
+
+}
+
+```
 
