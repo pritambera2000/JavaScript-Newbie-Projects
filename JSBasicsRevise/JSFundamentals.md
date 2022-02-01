@@ -767,14 +767,68 @@ let i = 0;
 while(i<3){ // 0 1 2 
 console.log(i);
 i++
+}
 
 let x = 5; 
 while(x){ // when x becomes 0 the loop stops 
 console.log(x);
 x-- 
 }
+```
+#### do..while loop 
+The do...while loop is very similar, but provides a variation on the while structure:
+#### Syntax: 
+```JavaScript
+initializer
+do {
+  // code to run
 
+  final-expression
+} while (condition)
+```
+#### Examples:
+```JavaScript
+// Basic Example:
+let i = 0;
+do{
+ console.log(i);
+ i++
+}while(i<6);
+// New Example
+
+let cars = ["Tesla","BMW","TATA","Mustang","Zeep"];
+let myFavCars = "My Favorite Cars are ";
+let i =0;
+do{
+ if( i === cars.length - 1 ){
+	 myFavCars += `and ${cars[i]}.`
+ }else{
+   myFavCars += `${cars[i]}, `;
+ }
+  i++
+}while(i < cars.length);
+console.log(myFavCars); // My Favorite Cars are Tesla, BMW, TATA, Mustang and Jeep.
+```
+#### break & continue
+Break is used to interrupt a loop. & We use the keyword continue to skip a certain iterations.
+#### Examples:
+```JavaScript
+/* Break */ 
+for(let i = 0; i <= 5; i++){
+  if(i == 3){
+    break
+  }
+  console.log(i)
 }
 
-```
+// 0 1 2 
+/* Continue */ 
+for(let i = 0; i <= 5; i++){
+  if(i == 3){
+    continue
+  }
+  console.log(i)
+}
 
+// 0 1 2 4 5
+```
