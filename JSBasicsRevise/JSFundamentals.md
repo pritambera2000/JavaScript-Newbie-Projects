@@ -498,37 +498,37 @@ console.log(num3 - num2); // 2 two operand(num2,num3) present  thats why this op
 - Ternary Operators
 - Operator Precendence
 
-### Assignment Operator
+### **🎃 Assignment Operator**
 
-Assignment operators are operators that assign a value to a variable.
+👉 Assignment operators are operators that assign a value to a variable.
 
-#### Types -
+### **⭐ Types -**
 
 - = => x=4 , y=3
-- (Addition assignment) += => x+=y => x=x+y; // 7
-- (Subtraction assignment) -+ => x-=y => x=x-y; // 1
-- (Multiplication assignment) _= => x_=y => x=x\*y; // 12
-- (Division assignment) /= => x/=y => x=x/y; // 1.3333
-- (Modulus assignment) %= => x%=y => x=x%y; // 1
+- (Addition assignment) += 👉 x+=y => x=x+y; // 7
+- (Subtraction assignment) -+ 👉 x-=y => x=x-y; // 1
+- (Multiplication assignment) *= 👉 x_=y => x=x\*y; // 12
+- (Division assignment) /= 👉 x/=y => x=x/y; // 1.3333
+- (Modulus assignment) %= 👉 x%=y => x=x%y; // 1
 
-### Arithmetic Operators
+### **➡️ Arithmetic Operators**
 
-Arithmetic operators are the basic operators that we use to do sums in JavaScript:
+👉 Arithmetic operators are the basic operators that we use to do sums in JavaScript:
 
-#### Types -
+### **⭐ Types -**
 
-- - => x+y; // 7
+- + => x+y; // 7
 - - => x-y; // 1
-- - => x\*y; // 12
+- * => x\*y; // 12
 - / => x/y; // 1.3333
 - % => x%y; // 1
 - ** => x**y // 64
 
-### Comparison Operators
+### **➡️ Comparison Operators**
 
-Sometimes we will want to run true/false tests, then act accordingly depending on the result of that test — to do this we use comparison operators.
+👉 Sometimes we will want to run true/false tests, then act accordingly depending on the result of that test — to do this we use comparison operators.
 
-#### Types -
+### **⭐ Types -**
 
 - === -> Strict equality | Tests whether the left and right values are identical to one Another
 - !== -> Strict-non-equality | Tests whether the left and right values are not identical to one Another
@@ -538,21 +538,21 @@ Sometimes we will want to run true/false tests, then act accordingly depending o
 - > = -> Greater than or equal to | Tests whether the left value is greater than or equal to the right one.
 
 ```JavaScript
-console.log(3==="3"); // false
-console.log(3===3); // true
-console.log(3=="3"); // true
-console.log(3!==3); // false
-console.log(3<2); // false
-console.log(3>2); // true
-console.log(3>=2); // true
-console.log(3<=2); // false
-console.log("mango".length == "milk".length ); // false
+console.log(3 === "3"); // false
+console.log(3 === 3); // true
+console.log(3 == "3"); // true
+console.log(3 !== 3); // false
+console.log(3 < 2); // false
+console.log(3 > 2); // true
+console.log(3 >= 2); // true
+console.log(3 <= 2); // false
+console.log("mango".length == "milk".length); // false
 console.log("pizza".length == "juice".length); // true
 ```
 
-### Logical operators
+### **➡️ Logical operators**
 
-#### Types -
+### **⭐ Types -**
 
 - && -> The && operator gets true only if the two operands are true.
 - || -> The || operator gets true either of the operand is true.
@@ -560,46 +560,44 @@ console.log("pizza".length == "juice".length); // true
 
 ```JavaScript
 // && Example
-let check = 5>3 && 7>5
+let check = 5 > 3 && 7 > 5;
 console.log(check); // true (both are true)
-let check1 = 5>3 && 7>8;
+let check1 = 5 > 3 && 7 > 8;
 console.log(check1); // false ( 7>8 is false)
-let check2 = 5<3 && 9<8;
-console.log(check2);// false (both false)
+let check2 = 5 < 3 && 9 < 8;
+console.log(check2); // false (both false)
 // || Example
-let check3 = 5>3 || 7>5;
-console.log(check3);// true ( both true)
-let check4 = 5>3 || 7>8;
+let check3 = 5 > 3 || 7 > 5;
+console.log(check3); // true ( both true)
+let check4 = 5 > 3 || 7 > 8;
 console.log(check4); // true ( 5>3 is true so neat result also true )
-let check5 = 5<3 || 9<8 ;
+let check5 = 5 < 3 || 9 < 8;
 console.log(check5); // false (both false)
 // ! Example
-let check6 = 5>3;
+let check6 = 5 > 3;
 console.log(check6); // true
-let check7 = !(5>3);
+let check7 = !(5 > 3);
 console.log(check7); // false (converts true to false)
 ```
 
-### Increment and decrement operators
+### **➡️ Increment and decrement operators**
 
 Sometimes you'll want to repeatedly add or subtract one to or from a numeric variable value. This can be conveniently done using the increment (++) and decrement (--) operators.
 
-### Increment
+### ✔ Increment
 
 ```JavaScript
-
 //Post Increment
 let number = 2;
- number++
+number++;
 console.log(number); // 3
 //Pre Increment
 let number1 = 2;
 ++number1;
 console.log(number1); // 3
-
 ```
 
-### Decrement
+### ✔ Decrement
 
 ```JavaScript
 //Post Decrement
@@ -612,17 +610,17 @@ let number3 = 2;
 console.log(number3); // 1
 ```
 
-## Ternary operator
+### **➡️ Ternary operator**
 
-The conditional (ternary) operator is the only JavaScript operator that takes three operands: a condition followed by a question mark (?), then an expression to execute if the condition is truthy followed by a colon (:), and finally the expression to execute if the condition is falsy. This operator is frequently used as an alternative to an if...else statement.
+👉 The conditional (ternary) operator is the only JavaScript operator that takes three operands: a condition followed by a question mark (?), then an expression to execute if the condition is truthy followed by a colon (:), and finally the expression to execute if the condition is falsy. This operator is frequently used as an alternative to an if...else statement.
 
-### Syntax:
+### 🎃 Syntax:
 
 ```JavaScript
 condition ? exprIfTrue : exprIfFalse
 ```
 
-### Example
+### 🎃 Example
 
 ```JavaScript
 let isSweet = true;
@@ -632,10 +630,11 @@ isSweet = false;
 isSweet ? `It is Sweet` : `It is not Sweet`; // 'It is not Sweet'
 
 let name = "pritam";
-let drink = (name === "pritam" ) ? `tea` : `coffee`;
+let drink = name === "pritam" ? `tea` : `coffee`;
 console.log(drink); // 'tea'
-drink = (name === "priya") ? `tea` : `coffee`;
+drink = name === "priya" ? `tea` : `coffee`;
 console.log(drink); // 'coffee'
+
 ```
 
 [Read more About Operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators)
