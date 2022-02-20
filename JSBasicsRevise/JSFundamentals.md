@@ -333,10 +333,11 @@ let hex = 0xff; // 255
 
 **🎃 1. Method ➡ `toString(base) :`**
 
-The method num.toString(base) returns a string representation of num in the numeral system with the given base. 
+The method num.toString(base) returns a string representation of num in the numeral system with the given base.
+
 - `base=16 :` is used for hex colors, character encodings etc, digits can be 0..9 or A..F.
- - `base=2 :` is mostly for debugging bitwise operations, digits can be 0 or 1.
- - `base=36 :` is the maximum, digits can be 0..9 or A..Z
+- `base=2 :` is mostly for debugging bitwise operations, digits can be 0 or 1.
+- `base=36 :` is the maximum, digits can be 0..9 or A..Z
 
 ```JavaScript
  let num1 = 1234;
@@ -353,6 +354,7 @@ console.log((9101112).toString(32)); // 8lnpo
  like toString in the example above,
   then we need to place two dots .. after  *****/
 ```
+
 **🎃 2. Rounding**
 
 One of the most used operations when working with numbers is rounding.
@@ -374,6 +376,7 @@ One of the most used operations when working with numbers is rounding.
 console.log(Math.round(1.234567 * 100)/100); // 1.234567 * 100 > 123.4567 (Math.floor method) > 123 (devided by 100) > 1.23
 
 ```
+
 **🎃 3. Method ➡ `toFixed(n) :`**
 
 The method toFixed(n) rounds the number to n digits after the point and returns a string representation of the result.
@@ -392,6 +395,7 @@ console.log(number1.toFixed(2)); // 13.37
 console.log(number1.toFixed(3)); // 13.367
 console.log(number1.toFixed(4)); // 13.3668
 ```
+
 **🎃 4. Method ➡ `parseInt & parseFloat:`**
 
 this method read” a number from a string until they can’t.Converts a string to a numnber . The function parseInt returns an integer, whilst parseFloat will return a floating-point number:
@@ -415,6 +419,7 @@ let num = "133"
 console.log(parseInt(num,16)) // 307
 
 ```
+
 ### **🔥 Imprecise calculations**
 
 So, there is wired thig here
@@ -425,7 +430,7 @@ console.log(0.1+0.2) // Expected 0.3
 console.log(0.1+0.2) // 0.30000000000000004
 ```
 
-***But why This happens :*** A Number is stored in memoy in binary form , a sequence of bits i.e 0 & 1 but fractions like 0.1 ans 0.2 that look simple in decimal numeric system but actually unEnding fractions in their binary form. e.g
+**_But why This happens :_** A Number is stored in memoy in binary form , a sequence of bits i.e 0 & 1 but fractions like 0.1 ans 0.2 that look simple in decimal numeric system but actually unEnding fractions in their binary form. e.g
 `0.1 = 1/10` but `1/3=0.3333(3)endlessfraction` So, division by powers 10 is guaranteed to work well in the decimal system, but division by 3 is not. For the same reason, in the binary numeral system, the division by powers of 2 is guaranteed to work, but 1/10 becomes an endless binary fraction.There’s just no way to store exactly 0.1 or exactly 0.2 using the binary system, just like there is no way to store one-third as a decimal fraction.
 
 #### **✔ Solution of the problem**
@@ -440,6 +445,7 @@ console.log(+sum.toFixed(2)); //0.30 (Number)
 
 console.log((0.1 * 100 + 0.2 * 100) / 100); //0.3
 ```
+
 ### **🔥 Converting to number data types**
 
 Sometimes we need to extract a number embded in strings i.e in "" . Specially when a user puts a number in a form . The method is `Number()`. Because the `+` operators convert numbers to strings. Details Below `Data type conversion` section.
@@ -451,6 +457,7 @@ console.log(sum); // 123 (`+` operator converts 3 as a string )
 
 console.log(Number(userInput) + 3); // 15
 ```
+
 ### **🔥 Data type conversion**
 
 JavaScript is dynamically typed language so we dont need to specify the data type of a variable when we decleare a variable. So that means data types are autometically converted as-needed during code execution. Example below.
@@ -507,7 +514,7 @@ console.log(num3 - num2); // 2 two operand(num2,num3) present  thats why this op
 - = => x=4 , y=3
 - (Addition assignment) += 👉 x+=y => x=x+y; // 7
 - (Subtraction assignment) -+ 👉 x-=y => x=x-y; // 1
-- (Multiplication assignment) *= 👉 x_=y => x=x\*y; // 12
+- (Multiplication assignment) \*= 👉 x\_=y => x=x\*y; // 12
 - (Division assignment) /= 👉 x/=y => x=x/y; // 1.3333
 - (Modulus assignment) %= 👉 x%=y => x=x%y; // 1
 
@@ -517,9 +524,9 @@ console.log(num3 - num2); // 2 two operand(num2,num3) present  thats why this op
 
 ### **⭐ Types -**
 
-- + => x+y; // 7
+- - => x+y; // 7
 - - => x-y; // 1
-- * => x\*y; // 12
+- - => x\*y; // 12
 - / => x/y; // 1.3333
 - % => x%y; // 1
 - ** => x**y // 64
@@ -582,7 +589,7 @@ console.log(check7); // false (converts true to false)
 
 ### **➡️ Increment and decrement operators**
 
-Sometimes you'll want to repeatedly add or subtract one to or from a numeric variable value. This can be conveniently done using the increment (++) and decrement (--) operators.
+👉 Sometimes you'll want to repeatedly add or subtract one to or from a numeric variable value. This can be conveniently done using the increment (++) and decrement (--) operators.
 
 ### ✔ Increment
 
@@ -643,24 +650,24 @@ console.log(drink); // 'coffee'
 
 [Read Here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#operator_precedence)
 
-## Day-4
+# Day-5
 
-### Making decisions in your code - Conditionals
+## **⚡ Making decisions in your code - Conditionals**
 
-Conditional statements are used for make decisions based on different conditions. By default , statements in JavaScript script executed sequentially from top to bottom.
+👉 Conditional statements are used for make decisions based on different conditions. By default , statements in JavaScript script executed sequentially from top to bottom.
 
-Conditions can be implementing using the following ways:
+➡️ Conditions can be implementing using the following ways:
 
-- if
-- if..else
-- if Else if Else
-- switch
+- **⭐ if**
+- **⭐ if..else**
+- **⭐ if Else if Else**
+- **⭐ switch**
 
-### if
+### **🎃 if**
 
-The if(...) statement evaluates a condition in parentheses and, if the result is true, executes a block of code.
+👉 The if(...) statement evaluates a condition in parentheses and, if the result is true, executes a block of code.
 
-#### Syntax:
+#### ✔ Syntax:
 
 ```JavaScript
 // syntax
@@ -669,53 +676,53 @@ if (condition) {
 }
 ```
 
-#### Example:
+#### ✔ Example:
 
 ```JavaScript
 let age = 17;
-if (age>=18) {
-console.log("You can Enter")
-}; // No output as it is false
+if (age >= 18) {
+  console.log("You can Enter");
+} // No output as it is false
 let newAge = 19;
-if (newAge>=18) {
-	console.log("You can Enter")
-}; // You can Enter
-
+if (newAge >= 18) {
+  console.log("You can Enter");
+} // You can Enter
 ```
 
-### if..else
+### **🎃 if..else**
 
-If condition is true the first block will be executed, if not the else condition will be executed.
+👉 If condition is true the first block will be executed, if not the else condition will be executed.
 
-#### Syntax:
+#### ✔ Syntax:
 
 ```JavaScript
 if (condition) {
-   statement1  // this part of code runs for truthy condition
+  statement1; // this part of code runs for truthy condition
 } else {
-   statement2 // this part of code runs for false condition
+  statement2; // this part of code runs for false condition
 }
-
 ```
 
-#### Example:
+#### ✔ Example:
 
 ```JavaScript
 let age = 16;
-if (age>=18) {
-	console.log("You can Drink Beer")
+if (age >= 18) {
+  console.log("You can Drink Beer");
 } else {
-	console.log("You can Drink Juice")
+  console.log("You can Drink Juice");
 } // You can Drink Juice
+
 ```
 
-### If Else if else
+### **🎃 If Else if else**
 
-Multiple if...else statements can be nested to create an else if clause. Note that there is no elseif (in one word) keyword in JavaScript.
+👉 Multiple if...else statements can be nested to create an else if clause. Note that there is no elseif (in one word) keyword in JavaScript.
 
-#### Syntax:
+#### ✔ Syntax:
 
-```JavaScriptif (condition1)
+```JavaScript
+if (condition1)
   statement1
 else if (condition2)
   statement2
@@ -726,28 +733,27 @@ else
   statementN
 ```
 
-#### Example:
+#### ✔ Example:
 
 ```JavaScript
-
 let int = 12;
-if(int>0){
-	console.log("It is Positive Number");
-}else if(int<0){
-	console.log("It is a negetive number");
-}else if(int === 0){
-	console.log("It is Zero");
-}else{
-	console.log("It is not a number");
-}; // It is a Positive Number
+if (int > 0) {
+  console.log("It is Positive Number");
+} else if (int < 0) {
+  console.log("It is a negetive number");
+} else if (int === 0) {
+  console.log("It is Zero");
+} else {
+  console.log("It is not a number");
+} // It is a Positive Number
 ```
 
-### Switch Stament
+### **🎃 Switch Stament**
 
-A switch statement can replace multiple if checks.
+👉 A switch statement can replace multiple if checks.
 It gives a more descriptive way to compare a value with multiple variants.
 
-### Syntax:
+#### ✔ Syntax:
 
 The switch has one or more case blocks and an optional default.
 
@@ -769,42 +775,41 @@ switch(x) {
 }
 ```
 
-### Example:
+#### ✔ Example:
 
 ```JavaScript
 let fruit = "mango";
 
-switch(fruit){
-case "orange":
- console.log("orange's are orange");
- break;
-case "banana":
- console.log("banana's are yellow");
- break;
-case "guava":
- console.log("guava's are green");
- break;
-default:
- console.log("sorry " + fruit + " is not in the database");
-}; // sorry mango is not in the databse
-
+switch (fruit) {
+  case "orange":
+    console.log("orange's are orange");
+    break;
+  case "banana":
+    console.log("banana's are yellow");
+    break;
+  case "guava":
+    console.log("guava's are green");
+    break;
+  default:
+    console.log("sorry " + fruit + " is not in the database");
+} // sorry mango is not in the databse
 ```
 
-### Looping Code
+## **⚡Looping Code**
 
-Loops are all about doing the same thing over and over again. Often, the code will be slightly different each time round the loop, or the same code will run but with different variables.
+👉 Loops are all about doing the same thing over and over again. Often, the code will be slightly different each time round the loop, or the same code will run but with different variables.
 
 ### Types:
 
-- for loop
-- while loop
-- do while loop
-- for of loop
-- break & continue
+- **⭐ for loop**
+- **⭐ while loop**
+- **⭐ do while loop**
+- **⭐ for of loop**
+- **⭐ break & continue**
 
-#### for loop
+### **🎃 for loop**
 
-### Syntax:
+#### ✔ Syntax:
 
 ```JavaScript
 for (initializer; condition; final-expression) {
@@ -812,12 +817,12 @@ for (initializer; condition; final-expression) {
 }
 ```
 
-#### Examples:
+#### ✔ Examples:
 
 ```JavaScript
-for(i=0;i<5;i++){
-	console.log(i);
-};
+for (i = 0; i < 5; i++) {
+  console.log(i);
+}
 ```
 
 In the above for loop, the statement start by declaring & initializing i to 0; then it checks i less than 5 and execute statements.and increments i after each pass though the loop.
@@ -829,14 +834,14 @@ The declearation of i in the head of for loop is optional , and the conditional 
 // optional initialization
 
 let i = 0;
-for(;i<7;i++){
-	console.log(i);
-};
+for (; i < 7; i++) {
+  console.log(i);
+}
 //optional condition block
-for (let i = 0;; i++) {
-   console.log(i);
-   if (i > 3) break;
-   // more statements
+for (let i = 0; ; i++) {
+  console.log(i);
+  if (i > 3) break;
+  // more statements
 }
 //omit all
 let i = 0;
@@ -848,98 +853,104 @@ for (;;) {
 }
 ```
 
-#### While loop
+### **🎃 While loop**
 
-#### Syntax:
+#### ✔ Syntax:
 
 ```JavaScript
-initializer
+initializer;
 while (condition) {
   // code to run
 
-  final-expression
+  final - expression;
 }
+
 ```
 
-#### Examples:
+#### ✔ Examples:
 
 ```JavaScript
 let i = 0;
-while(i<3){ // 0 1 2
-console.log(i);
-i++
+while (i < 3) {
+  // 0 1 2
+  console.log(i);
+  i++;
 }
 
 let x = 5;
-while(x){ // when x becomes 0 the loop stops
-console.log(x);
-x--
+while (x) {
+  // when x becomes 0 the loop stops
+  console.log(x);
+  x--;
 }
 ```
 
-#### do..while loop
+### **🎃 do..while loop**
 
-The do...while loop is very similar, but provides a variation on the while structure:
+👉 The do...while loop is very similar, but provides a variation on the while structure:
 
-#### Syntax:
+#### ✔ Syntax:
 
 ```JavaScript
-initializer
+initializer;
 do {
   // code to run
 
-  final-expression
-} while (condition)
+  final - expression;
+} while (condition);
+
 ```
 
-#### Examples:
+#### ✔ Examples:
 
 ```JavaScript
 // Basic Example:
 let i = 0;
-do{
- console.log(i);
- i++
-}while(i<6);
+do {
+  console.log(i);
+  i++;
+} while (i < 6);
 // New Example
 
-let cars = ["Tesla","BMW","TATA","Mustang","Zeep"];
+let cars = ["Tesla", "BMW", "TATA", "Mustang", "Zeep"];
 let myFavCars = "My Favorite Cars are ";
-let i =0;
-do{
- if( i === cars.length - 1 ){
-	 myFavCars += `and ${cars[i]}.`
- }else{
-   myFavCars += `${cars[i]}, `;
- }
-  i++
-}while(i < cars.length);
+let i = 0;
+do {
+  if (i === cars.length - 1) {
+    myFavCars += `and ${cars[i]}.`;
+  } else {
+    myFavCars += `${cars[i]}, `;
+  }
+  i++;
+} while (i < cars.length);
 console.log(myFavCars); // My Favorite Cars are Tesla, BMW, TATA, Mustang and Jeep.
+
 ```
 
-#### break & continue
+### **🎃 break & continue**
 
-Break is used to interrupt a loop. & We use the keyword continue to skip a certain iterations.
+👉 Break is used to interrupt a loop. & We use the keyword continue to skip a certain iterations.
 
-#### Examples:
+#### ✔ Examples:
 
 ```JavaScript
 /* Break */
-for(let i = 0; i <= 5; i++){
-  if(i == 3){
-    break
+for (let i = 0; i <= 5; i++) {
+  if (i == 3) {
+    break;
   }
-  console.log(i)
+  console.log(i);
 }
 
 // 0 1 2
 /* Continue */
-for(let i = 0; i <= 5; i++){
-  if(i == 3){
-    continue
+for (let i = 0; i <= 5; i++) {
+  if (i == 3) {
+    continue;
   }
-  console.log(i)
+  console.log(i);
 }
 
 // 0 1 2 4 5
+
 ```
