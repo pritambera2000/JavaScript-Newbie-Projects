@@ -656,7 +656,7 @@ console.log(drink); // 'coffee'
 
 👉 Conditional statements are used for make decisions based on different conditions. By default , statements in JavaScript script executed sequentially from top to bottom.
 
-➡️ Conditions can be implementing using the following ways:
+➡️ Conditions can be implementing using the following ways:👇
 
 - **⭐ if**
 - **⭐ if..else**
@@ -799,7 +799,7 @@ switch (fruit) {
 
 👉 Loops are all about doing the same thing over and over again. Often, the code will be slightly different each time round the loop, or the same code will run but with different variables.
 
-### Types:
+### Types:👇
 
 - **⭐ for loop**
 - **⭐ while loop**
