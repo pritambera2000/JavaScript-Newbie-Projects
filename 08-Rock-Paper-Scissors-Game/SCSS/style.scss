@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: radial-gradient(
+    134.34% 134.34% at 50% 0%,
+    #1f3757 0%,
+    #131537 100%
+  );
+}
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .scoreboard {
+    margin-top: 2rem;
+    border: 2px solid white;
+    border-radius: 10px;
+    width: 70vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .title {
+      width: 20px;
+      h1 {
+        color: white;
+      }
+    }
+    .score {
+      height: 70px;
+      width: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      background-color: white;
+      border-radius: 3px;
+      margin-right: 1rem;
+      h1 {
+        color: #565468;
+      }
+    }
+  }
+  .game-board{
+    background-image: url("/assets/images/triangle.png");
+    background-repeat:no-repeat;
+    background-position: center;
+    margin-top:2.5rem;
+    height:450px;
+    width:450px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    .paper{
+      margin-right: 0.7rem;
+    }
+    .scissors{
+      margin-left:0.7rem;
+    }
+    .hand{
+      cursor: pointer;
+      transition: 0.4s all;
+      &:hover{
+        transform: translate3d(0px, -8px, 0px);
+
+      }
+    }
+  }
+}

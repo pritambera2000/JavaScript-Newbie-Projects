@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(134.34% 134.34% at 50% 0%, #1f3757 0%, #131537 100%);
+}
+
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .scoreboard {
+  margin-top: 2rem;
+  border: 2px solid white;
+  border-radius: 10px;
+  width: 70vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.wrapper .scoreboard .title {
+  width: 20px;
+}
+
+.wrapper .scoreboard .title h1 {
+  color: white;
+}
+
+.wrapper .scoreboard .score {
+  height: 70px;
+  width: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: white;
+  border-radius: 3px;
+  margin-right: 1rem;
+}
+
+.wrapper .scoreboard .score h1 {
+  color: #565468;
+}
+
+.wrapper .game-board {
+  background-image: url("/assets/images/triangle.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-top: 2.5rem;
+  height: 450px;
+  width: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .game-board .paper {
+  margin-right: 0.7rem;
+}
+
+.wrapper .game-board .scissors {
+  margin-left: 0.7rem;
+}
+
+.wrapper .game-board .hand {
+  cursor: pointer;
+  -webkit-transition: 0.4s all;
+  transition: 0.4s all;
+}
+
+.wrapper .game-board .hand:hover {
+  -webkit-transform: translate3d(0px, -8px, 0px);
+          transform: translate3d(0px, -8px, 0px);
+}
