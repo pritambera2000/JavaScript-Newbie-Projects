@@ -22,6 +22,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /* ==== CONTEST SECTION ==== */
 }
 
 .wrapper .scoreboard {
@@ -107,4 +108,67 @@ body {
 .wrapper .game-board .hand:hover {
   -webkit-transform: translate3d(0px, -8px, 0px);
           transform: translate3d(0px, -8px, 0px);
+}
+
+.wrapper .contest {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  width: 80vw;
+  margin-top: 1rem;
+  height: 100vh;
+  place-content: center;
+}
+
+.wrapper .contest h1 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.wrapper .contest .image-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.wrapper .contest .refere {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.wrapper .contest .refere h1 {
+  font-size: 1.5rem;
+}
+
+.wrapper .contest .refere button {
+  background-color: white;
+  padding: 0.5rem 0.4rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  border: none;
+  -webkit-transition: all 0.1s;
+  transition: all 0.1s;
+}
+
+.wrapper .contest .refere button:hover {
+  -webkit-transform: translate3d(0px, -3px, 0px);
+          transform: translate3d(0px, -3px, 0px);
+  background-color: whitesmoke;
 }

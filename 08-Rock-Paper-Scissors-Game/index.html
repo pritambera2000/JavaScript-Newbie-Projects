@@ -21,15 +21,37 @@
       </div>
       <!-- GAMEBOARD -->
       <div class="game-board">
-        <div class="hand paper" data-choice='Paper' >
+        <!-- <div class="hands"> -->
+        <div class="hand paper" data-choice='Paper' onclick="pickPlayersChoice('paper')" >
           <img src="./assets/images/Paper.png" alt="paper" />
         </div>
-        <div class="hand scissors" data-choice='Scissors' >
+        <div class="hand scissors" data-choice='Scissors' onclick="pickPlayersChoice('scissors')" >
           <img src="./assets/images/Scissors.png" alt="scissors" />
         </div>
-        <div class="hand rock" data-choice='Rock'>
+        <div class="hand rock" data-choice='Rock' onclick="pickPlayersChoice('rock')">
           <img src="./assets/images/Rock.png" alt="rock" />
         </div>
+      <!-- </div> -->
+      </div>
+      <div class="contest">
+        <div class="user-pick">
+          <h1>YOU PICKED</h1>
+          <div class="image-container">
+            <img src="./assets/images/Paper.png" alt="">
+          </div>
+        </div>
+          <div class="refere">
+            <div class="decision"><h1>YOU WIN</h1></div>
+            <div class="play-again">
+              <button>PLAY AGAIN</button>
+            </div>
+          </div>
+          <div class="computers-pick">
+            <h1>COMPUTER PICKED</h1>
+            <div class="image-container">
+              <img src="./assets/images/Rock.png" alt="">
+            </div>
+          </div>
       </div>
       <div class="attribution">
         Challenge by

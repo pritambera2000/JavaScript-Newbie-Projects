@@ -45,28 +45,70 @@ body {
       }
     }
   }
-  .game-board{
+  .game-board {
     background-image: url("/assets/images/triangle.png");
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-position: center;
-    margin-top:2.5rem;
-    height:450px;
-    width:450px;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    .paper{
+    margin-top: 2.5rem;
+    height: 450px;
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .paper {
       margin-right: 0.7rem;
     }
-    .scissors{
-      margin-left:0.7rem;
+    .scissors {
+      margin-left: 0.7rem;
     }
-    .hand{
+    .hand {
       cursor: pointer;
       transition: 0.4s all;
-      &:hover{
+      &:hover {
         transform: translate3d(0px, -8px, 0px);
+      }
+    }
+  }
 
+  /* ==== CONTEST SECTION ==== */
+
+  .contest {
+    // display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80vw;
+    margin-top: 1rem;
+    height: 100vh;
+    place-content: center;
+    h1 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      color: white;
+      text-align: center;
+    }
+    .image-container {
+      display: flex;
+      justify-content: center;
+    }
+    .refere {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      h1 {
+        font-size: 1.5rem;
+      }
+      button {
+        background-color: white;
+        padding: 0.5rem 0.4rem;
+        border-radius: 0.2rem;
+        cursor: pointer;
+        border: none;
+        transition: all 0.1s;
+        &:hover {
+          transform: translate3d(0px, -3px, 0px);
+          background-color: whitesmoke;
+        }
       }
     }
   }

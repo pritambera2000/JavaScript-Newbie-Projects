@@ -1,3 +1,4 @@
+/*
 const buttons = document.querySelectorAll(".hand");
 const scoreEl = document.getElementById('score');
 const choices = ["rock", "paper", "scissors"];
@@ -40,4 +41,12 @@ function checkWinner() {
 function randomChoice() {
   return choices[Math.floor(Math.random() * choices.length)];
 }
+*/
 
+const pickPlayersChoice = (hand) => {
+  console.log(hand);
+  let gameBoard = document.querySelector('.game-board');
+  gameBoard.style.display = "none";
+ 
+  
+}
