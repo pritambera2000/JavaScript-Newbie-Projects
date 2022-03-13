@@ -75,7 +75,7 @@ body {
   .contest {
     // display: flex;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     width: 80vw;
     margin-top: 1rem;
     height: 100vh;
@@ -95,6 +95,8 @@ body {
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      grid-row-start:2;
+      grid-column: span 2;
       h1 {
         font-size: 1.5rem;
       }
@@ -111,5 +113,10 @@ body {
         }
       }
     }
+   
+  }
+  .contest:nth-child(3){
+    grid-column-start:4;
+    grid-row-start: 1;
   }
 }
