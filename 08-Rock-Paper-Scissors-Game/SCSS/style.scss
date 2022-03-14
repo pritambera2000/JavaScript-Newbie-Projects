@@ -11,8 +11,8 @@ body {
   );
 }
 .wrapper {
-  height: 100vh;
-  width: 100vw;
+  height:100vh;
+  // width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,6 +28,8 @@ body {
       width: 20px;
       h1 {
         color: white;
+        line-height: 1;
+        padding: 1rem;
       }
     }
     .score {
@@ -57,10 +59,15 @@ body {
     justify-content: center;
     .paper {
       margin-right: 0.7rem;
+      // margin-top:8rem
     }
     .scissors {
       margin-left: 0.7rem;
+      // margin-top:8rem;
     }
+    // .rock{
+    //   margin-bottom:5rem;
+    // }
     .hand {
       cursor: pointer;
       transition: 0.4s all;
@@ -74,8 +81,8 @@ body {
 
   .contest {
     // display: flex;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
     width: 80vw;
     margin-top: 1rem;
     height: 100vh;
@@ -95,8 +102,7 @@ body {
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      grid-row-start:2;
-      grid-column: span 2;
+
       h1 {
         font-size: 1.5rem;
       }
@@ -113,10 +119,65 @@ body {
         }
       }
     }
-   
   }
-  .contest:nth-child(3){
-    grid-column-start:4;
-    grid-row-start: 1;
+  .attribution{
+    a{
+      text-decoration:none;
+      color:white;
+    }
+    font-size:0.8rem;
+    text-align:center;
+  }
+  @media (max-width: 768px) {
+    .game-board {
+      height: 90vh;
+      margin-top: 0;
+      .hand {
+        img {
+          height: 170px;
+        }
+      }
+      .paper,
+      .scissors {
+        margin-top: 11rem;
+      }
+      .rock {
+        margin-bottom: 11rem;
+      }
+    }
+    .scoreboard {
+      width:85vw;
+      .title {
+        h1 {
+          font-size: 1.5rem;
+          padding: 1rem;
+        }
+      }
+    }
+    .contest {
+      grid-template-columns: repeat(2, 1fr);
+      margin-bottom: 10rem;
+      gap: 3rem;
+      h1 {
+        font-size: 0.8rem;
+      }
+      .refere {
+        margin-top: 2rem;
+        grid-row-start: 2;
+        grid-column: span 2;
+        h1 {
+          font-size: 2.5rem;
+        }
+        button {
+          padding: 1rem 4.4rem;
+          font-size: 1rem;
+        }
+      }
+      .image-container {
+        img {
+          height: 160px;
+        }
+      }
+    }
   }
 }

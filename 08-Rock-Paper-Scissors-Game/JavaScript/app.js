@@ -44,16 +44,16 @@ const pickComputerHand = () => {
 // Making Decision For WIN LOOSE or TIE
 const reffere = (hand, compHand) => {
   if (hand === compHand) {
-    setDecision("It's a Tie");
+    setDecision("IT'S A TIE:|");
   } else if (
     (hand === "paper" && compHand === "rock") ||
     (hand === "scissors" && compHand === "paper") ||
     (hand === "rock" && compHand === "scissors")
   ) {
-    setDecision("You Win!");
+    setDecision("YOU WIN!");
     setScore(Score + 1);
   } else {
-    setDecision("You Loose");
+    setDecision("YOU LOOSE:(");
   }
 };
 
