@@ -119,6 +119,7 @@ body {
   margin-top: 1rem;
   height: 100vh;
   place-content: center;
+  margin-bottom: 10rem;
 }
 
 .wrapper .contest h1 {
@@ -184,7 +185,11 @@ body {
 }
 
 @media (max-width: 768px) {
+  .wrapper .wrapper {
+    height: unset;
+  }
   .wrapper .game-board {
+    background-position: 70px 100px;
     height: 90vh;
     margin-top: 0;
   }
@@ -193,10 +198,10 @@ body {
   }
   .wrapper .game-board .paper,
   .wrapper .game-board .scissors {
-    margin-top: 11rem;
+    margin-top: 4rem;
   }
   .wrapper .game-board .rock {
-    margin-bottom: 11rem;
+    margin-bottom: 12rem;
   }
   .wrapper .scoreboard {
     width: 85vw;
