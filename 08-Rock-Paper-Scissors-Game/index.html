@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/CSS/style.css" />
     <title>Frontend Mentor | Rock, Paper, Scissors</title>
   </head>
@@ -17,7 +20,7 @@
         <div class="title">
           <h1>Rock Paper Scissors</h1>
         </div>
-        <div class="score" >
+        <div class="score">
           <h3>SCORE</h3>
           <h1 id="score">0</h1>
         </div>
@@ -25,36 +28,52 @@
       <!-- GAMEBOARD -->
       <div class="game-board">
         <!-- <div class="hands"> -->
-        <div class="hand paper" data-choice='Paper' onclick="pickPlayersChoice('paper')" >
+        <div
+          class="hand paper"
+          data-choice="Paper"
+          onclick="pickPlayersChoice('paper')"
+        >
           <img src="./assets/images/Paper.png" alt="paper" />
         </div>
-        <div class="hand scissors" data-choice='Scissors' onclick="pickPlayersChoice('scissors')" >
+        <div
+          class="hand scissors"
+          data-choice="Scissors"
+          onclick="pickPlayersChoice('scissors')"
+        >
           <img src="./assets/images/Scissors.png" alt="scissors" />
         </div>
-        <div class="hand rock" data-choice='Rock' onclick="pickPlayersChoice('rock')">
+        <div
+          class="hand rock"
+          data-choice="Rock"
+          onclick="pickPlayersChoice('rock')"
+        >
           <img src="./assets/images/Rock.png" alt="rock" />
         </div>
-      <!-- </div> -->
+        <!-- </div> -->
       </div>
       <div class="contest">
         <div class="user-pick">
           <h1>YOU PICKED</h1>
           <div class="image-container">
-            <img id="userPickedHand" src="./assets/images/Paper.png" alt="">
+            <img id="userPickedHand" src="./assets/images/Paper.png" alt="" />
           </div>
         </div>
-          <div class="refere">
-            <div class="decision"><h1>YOU WIN</h1></div>
-            <div class="play-again">
-              <button onclick="restartGame()" >PLAY AGAIN</button>
-            </div>
+        <div class="refere">
+          <div class="decision"><h1>YOU WIN</h1></div>
+          <div class="play-again">
+            <button onclick="restartGame()">PLAY AGAIN</button>
           </div>
-          <div class="computers-pick">
-            <h1>COMPUTER PICKED</h1>
-            <div class="image-container">
-              <img id="computerPickedHand" src="./assets/images/Rock.png" alt="">
-            </div>
+        </div>
+        <div class="computers-pick">
+          <h1>COMPUTER PICKED</h1>
+          <div class="image-container">
+            <img
+              id="computerPickedHand"
+              src="./assets/images/Rock.png"
+              alt=""
+            />
           </div>
+        </div>
       </div>
       <div class="attribution">
         Challenge by
